@@ -13,8 +13,6 @@ plus.forEach((item) => {
       answers.forEach((answer) => {
         if (answer.previousElementSibling.contains(item)) {
           answer.style.display = "block";
-        } else {
-          answer.style.display = "none";
         }
       });
     }

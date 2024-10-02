@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --White: hsl(0, 0%, 100%);
@@ -9,15 +9,37 @@
   --Font-weight: 400;
   --Font-weight-semibold: 600;
   --Font-weight-bold: 700;
-  --Font: 'Work Sans', sans-serif;
+  --Font: "Work Sans", sans-serif;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: var(--Light-pink);
 }
 
-.card {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-image: url("../assets/images/background-pattern-desktop.svg");
+  background-size: 1440px 320px;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 600px;
+  height: 900px;
+}
+
+.card {
   background-color: var(--White);
   border-radius: 16px;
   padding: 40px;
@@ -26,10 +48,51 @@ body {
 .card__header {
   display: flex;
   align-items: center;
+  margin-bottom: 32px;
+}
+
+.card__header svg {
+  margin-right: 24px;
 }
 
 .faqs {
   font-size: 56px;
   font-family: var(--Font);
   font-weight: var(--Font-weight-bold);
+}
+
+.card__item {
+  border-bottom: 1px solid var(--Light-pink);
+}
+
+.card__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.questions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-family: var(--Font);
+  font-weight: var(--Font-weight-semibold);
+  color: var(--Dark-purple);
+  margin-bottom: 24px;
+}
+
+.questions svg {
+  cursor: pointer;
+}
+
+.minus {
+  display: none;
+}
+
+.answer {
+  display: none;
+  font-size: 16px;
+  font-family: var(--Font);
+  font-weight: var(--Font-weight);
+  color: var(--Grayish-purple);
+  margin-bottom: 24px;
 }

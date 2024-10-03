@@ -3,6 +3,7 @@
 :root {
   --White: hsl(0, 0%, 100%);
   --Light-pink: hsl(275, 100%, 97%);
+  --Pink: hsl(281, 83%, 54%);
   --Grayish-purple: hsl(292, 16%, 49%);
   --Dark-purple: hsl(292, 42%, 14%);
   --Base-font-size: 16px;
@@ -78,10 +79,17 @@ body {
   font-weight: var(--Font-weight-semibold);
   color: var(--Dark-purple);
   margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.questions:hover {
+  color: var(--Pink);
 }
 
 .questions svg {
   cursor: pointer;
+  height: 30px;
+  width: 30px;
 }
 
 .minus {
@@ -95,4 +103,38 @@ body {
   font-weight: var(--Font-weight);
   color: var(--Grayish-purple);
   margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  /* Media query for screens smaller than 768px */
+  /* .container {
+    background-image: url("../assets/images/background-pattern-mobile.svg");
+    width: 100%;
+  } */
+  .card__container {
+    width: 90%;
+    height: auto;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .card__header {
+    margin-bottom: 16px;
+  }
+
+  .faqs {
+    font-size: 40px;
+  }
+
+  .questions {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .answer {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
 }

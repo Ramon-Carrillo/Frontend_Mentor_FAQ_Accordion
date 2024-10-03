@@ -1,9 +1,9 @@
 const plus = document.querySelectorAll(".plus");
 const minus = document.querySelectorAll(".minus");
-const answer1 = document.getElementById("answer1");
 const answers = document.querySelectorAll(".answer");
+const questions = document.querySelectorAll(".question");
 
-plus.forEach((item) => {
+const openClosePlus = plus.forEach((item) => {
   item.addEventListener("click", () => {
     if (item.classList.contains("plus")) {
       item.classList.remove("plus");
@@ -19,7 +19,7 @@ plus.forEach((item) => {
   });
 });
 
-minus.forEach((item) => {
+const openCloseMinus = minus.forEach((item) => {
   item.addEventListener("click", () => {
     if (item.classList.contains("minus")) {
       item.previousElementSibling.classList.remove("minus");

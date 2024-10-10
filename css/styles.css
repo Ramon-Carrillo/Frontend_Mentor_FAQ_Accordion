@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --White: hsl(0, 0%, 100%);
@@ -10,7 +10,7 @@
   --Font-weight: 400;
   --Font-weight-semibold: 600;
   --Font-weight-bold: 700;
-  --Font: "Work Sans", sans-serif;
+  --Font: 'Work Sans', sans-serif;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-image: url("../assets/images/background-pattern-desktop.svg");
+  background-image: url('../assets/images/background-pattern-desktop.svg');
   background-size: 1440px 320px;
   background-repeat: no-repeat;
   background-position: center top;
@@ -74,6 +74,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.questions span {
   font-size: 18px;
   font-family: var(--Font);
   font-weight: var(--Font-weight-semibold);
@@ -82,7 +85,7 @@ body {
   cursor: pointer;
 }
 
-.questions:hover {
+.questions span:hover {
   color: var(--Pink);
 }
 
@@ -107,13 +110,17 @@ body {
 
 @media (max-width: 768px) {
   /* Media query for screens smaller than 768px */
-  /* .container {
-    background-image: url("../assets/images/background-pattern-mobile.svg");
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../assets/images/background-pattern-mobile.svg');
     width: 100%;
-  } */
+    height: 100vh;
+  }
   .card__container {
-    width: 90%;
-    height: auto;
+    width: 83%;
+    height: 527px;
   }
 
   .card {
@@ -121,20 +128,37 @@ body {
   }
 
   .card__header {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
   .faqs {
     font-size: 40px;
   }
 
+  .card__item:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  .card__item:not(:first-child) {
+    margin-top: 20px;
+  }
+
   .questions {
+    align-items: center;
+  }
+
+  .questions span {
     font-size: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
+  }
+  .svg {
+    width: 32px;
   }
 
   .answer {
     font-size: 14px;
-    margin-bottom: 16px;
+    margin-top: 24px;
+    margin-bottom: 20px;
   }
 }

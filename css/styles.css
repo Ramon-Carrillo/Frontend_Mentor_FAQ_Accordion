@@ -36,6 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 15px;
   width: 600px;
   height: 900px;
 }
@@ -72,8 +73,9 @@ body {
 
 .questions {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .questions span {
@@ -81,18 +83,19 @@ body {
   font-family: var(--Font);
   font-weight: var(--Font-weight-semibold);
   color: var(--Dark-purple);
-  margin-bottom: 24px;
   cursor: pointer;
+  text-align: center;
 }
 
 .questions span:hover {
   color: var(--Pink);
 }
 
-.questions svg {
+.questions .svg {
   cursor: pointer;
   height: 30px;
   width: 30px;
+  align-items: center;
 }
 
 .minus {
@@ -102,6 +105,7 @@ body {
 .answer {
   display: none;
   font-size: 16px;
+  line-height: 150%;
   font-family: var(--Font);
   font-weight: var(--Font-weight);
   color: var(--Grayish-purple);
@@ -125,6 +129,7 @@ body {
 
   .card {
     padding: 24px;
+    margin-top: 60px;
   }
 
   .card__header {
